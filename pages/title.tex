@@ -1,0 +1,77 @@
+%The MIT License (MIT) Ronny Majani
+%
+%Copyright (c) 2018
+%
+%Permission is hereby granted, free of charge, to any person obtaining a copy
+%of this software and associated documentation files (the "Software"), to deal
+%in the Software without restriction, including without limitation the rights
+%to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%copies of the Software, and to permit persons to whom the Software is
+%furnished to do so, subject to the following conditions:
+%
+%The above copyright notice and this permission notice shall be included in all
+%copies or substantial portions of the Software.
+%
+%THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%SOFTWARE.
+
+
+
+\begin{titlepage}
+	% Commands for positioning 'textbox' elements in the page
+	\singlespacing
+	\makeatletter
+	\newcommand{\fromtop}[1]{%
+		\dimexpr+\Gm@tmargin+#1\baselineskip\relax
+	}
+	\newcommand{\fromleft}[1]{%
+		\dimexpr+\Gm@bindingoffset+\Gm@lmargin+#1\relax
+	}
+	\makeatother
+	\newcommand{\textboxwidth}{\textwidth}
+	\newcommand{\fromleftoffset}{\fromleft{0cm}}
+	\newcommand*{\vsinglespaces}[1]{\singlespacing\vspace*{#1\baselineskip}}
+	\setlength{\TPHorizModule}{\textwidth}
+	\setlength{\TPVertModule}{\textwidth}
+	% Commands for setting the fonts of this page
+	\newcommand*{\titlefont}[1]{\onehalfspacing\textbf{\fontsize{18pt}{27pt}\selectfont{\strut#1\strut}}\singlespacing}
+	\newcommand*{\subtitlefont}[1]{\onehalfspacing\textbf{\setstretch{0.75}\fontsize{14pt}{21pt}\selectfont#1}\singlespacing}
+	% Title Page main content
+	\begin{center}
+		% Thesis Title
+		\vsinglespaces{3}
+		\titlefont{
+			\showthesistitle
+		}
+		% Middle Block
+		\begin{textblock*}{\textboxwidth}(\fromleftoffset,\fromtop{16})
+			\subtitlefont{
+				A Thesis Submitted to \\
+				the Graduate School of Engineering and Sciences of\\
+				\.{I}zmir Institute of Technology\\
+				in Partial Fulfillment of the Requirements for the Degree of\linebreak\\
+				\showthesisdegree\linebreak\\
+				in \showthesismajor
+			}
+
+			\vsinglespaces{4}
+			\subtitlefont{
+				by\\
+				\showthesisauthor
+			}
+
+			\vsinglespaces{7}
+			\subtitlefont{\showthesisdate}
+                \vspace{-0.45cm}
+			\subtitlefont{  \.{I}ZM\.{I}R}
+		\end{textblock*}
+
+	\end{center}
+	\onehalfspacing
+\end{titlepage}
+\addtocounter{page}{1}  % add 1 to the page counter (so Title page counts as page i)
