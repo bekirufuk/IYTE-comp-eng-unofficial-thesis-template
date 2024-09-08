@@ -1,0 +1,21 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{@{}llllll@{}}
+\toprule
+Paper                       & Dataset         & Features                                         & IPC Level & Method                                                   & F1 Score \\ \midrule
+\cite{Grawe-word-embedding} & USPTO & title and abstract                               & Section                  & LSTM                                                     & 0.63  \\
+\cite{DeepPatent}           & USPTO-2M        & title, abstract                                  & Subclass                 & CNN                      & 0.40     \\
+\cite{lit_aiolli}             & WIPO-alpha      & title, abstract & Subclass                 & GPLM             & 0.52     \\
+\cite{lit_verbene_1}         & Clef-IP 2010    & abstract                                         & Subclass                 & Winnow                                                   & 0.56     \\
+\cite{Lee-BERT}             & USPTO-3M        & title, abstract                                  & Subclass                 & Pretrained BERT                                          & 0.63     \\
+\cite{lit_beney_clef_ip_2010}     & Clef-IP 2010    & title, abstract                           & Subclass                 & BalancedWinnow                                           & 0.68     \\
+\cite{BigBird}              & USPTO-3M        & description                                  & Subclass                 & Tansformers (BigBird)                                    & 0.69
+
+\end{tabular}
+\end{adjustbox}
+\caption{Patent classification results for different datasets and approaches}
+\label{tab:literature_results}
+\end{table}
